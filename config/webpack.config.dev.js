@@ -168,9 +168,17 @@ module.exports = {
   },
   
   // We use PostCSS for autoprefixing only.
-  postcss: function() {
+  postcss: () => {
     return [
-      autoprefixer({
+      // Allows you to nest one style rule inside another
+      // https://github.com/jonathantneal/postcss-nesting
+      require('postcss-nesting')(),
+      // Unwraps nested rules like how Sass does it
+      // https://github.com/postcss/postcss-nested
+      require('postcss-nested')(),
+      // Add vendor prefixes to CSS rules using values from caniuse.com
+      // https://github.com/postcss/autoprefixer
+      require('autoprefixer')({
         browsers: [
           '>1%',
           'last 4 versions',
