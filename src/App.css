@@ -1,3 +1,5 @@
+@import './common/reset.css';
+
 .App {
   text-align: center;
 }
@@ -6,9 +8,6 @@
   background-color: #ecda56;
   padding: 40px 20px;
   color: white;
-  h2 {
-    text-shadow: 3px 0 #333, -3px 0 #333, 0 3px #333, 0 -3px #333;
-  }
 }
 
 .App-intro {

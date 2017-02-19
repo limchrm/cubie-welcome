@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import Nav from './components/Nav';
 const styles = require('./App.css');
 
 class App extends Component<any, any> {
   render() {
     return (
       <div className={styles.App}>
+        <Nav />
         <div className={styles.header}>
           <div>
           </div>

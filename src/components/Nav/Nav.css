@@ -1,0 +1,19 @@
+@import '../../common/variables.css';
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+.toHome {
+  color: var(--chrm-blue);
+  font-size: 36px;
+  font-weight: 200;
+  margin: 0 32px;
+}
+.toAbout, .toWorks {
+  font-size: 20px;
+  color: var(--gray-dark);
+  font-weight: 200;
+}
