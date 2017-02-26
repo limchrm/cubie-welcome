@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Nav from './components/Nav';
+import List from './components/List';
 const styles = require('./App.css');
 
 class App extends Component<any, any> {
@@ -7,14 +8,9 @@ class App extends Component<any, any> {
     return (
       <div className={styles.App}>
         <Nav />
-        <div className={styles.header}>
-          <div>
-          </div>
-          <h2>WELCOME TO<br/>THE CUBIE LAND</h2>
+        <div className={styles.body}>
+          {this.props.children}
         </div>
-        <p className={styles['App-intro']}>
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
       </div>
     );
   }

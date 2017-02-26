@@ -1,16 +1,9 @@
 @import './common/reset.css';
 
 .App {
-  text-align: center;
+  display: flex;
 }
-
-.header {
-  background-color: #ecda56;
-  padding: 40px 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
-  padding: 40px 20px;
+.body {
+  width: calc( 100vw / 3 * 2 );
+  padding: 2.25rem;
 }

@@ -1,19 +1,24 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 const styles = require('./Nav.css');
 
 class Nav extends Component<any, any> {
   render() {
     return (
       <nav className={styles.nav}>
-        <a className={styles.toAbout} href="/about">
-          ABOUT
-        </a>
-        <a className={styles.toHome} href="/">
+
+        <Link className={styles.toHome} to="/">
           CHRM
-        </a>
-        <a className={styles.toWorks} href="/works">
+        </Link>
+
+        <Link className={styles.toAbout} to="/about">
+          ABOUT
+        </Link>
+
+        <Link className={styles.toWorks} to="/">
           WORKS
-        </a>
+        </Link>
+
       </nav>
     );
   }

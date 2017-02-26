@@ -1,0 +1,40 @@
+@import '../../common/variables.css';
+
+.list {
+  padding-left: 0;
+}
+.item {
+  margin-bottom: 2.25rem;
+}
+.thumb {
+  width: var(--thumbnail-width);
+  height: calc( var(--thumbnail-width) * 9 / 21 );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.text {
+  width: calc( 100vw - var(--thumbnail-width) );
+  padding: 3.25rem;
+  h3, h4, a {
+    color: white;
+  }
+  h3 {
+    font-size: 2rem;
+    font-weight: 100;
+  }
+  h4 {
+    font-size: 1rem;
+    font-weight: 300;
+    opacity: 0.75;
+    margin: 0.75rem 0 1.25rem;
+  }
+  a {
+    letter-spacing: 0;
+    font-weight: 500;
+    font-size: 0.75rem;
+    padding: 0.75rem 1rem;
+    border: 2px solid;
+    display: inline-block;
+  }
+}

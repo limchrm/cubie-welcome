@@ -46,7 +46,7 @@
     "strip-ansi": "3.0.1",
     "style-loader": "0.13.1",
     "ts-loader": "^0.9.5",
-    "typescript": "^2.0.6",
+    "typescript": "^2.2.1",
     "url-loader": "0.5.7",
     "webpack": "1.13.2",
     "webpack-combine-loaders": "^2.0.0",
@@ -55,10 +55,14 @@
     "whatwg-fetch": "1.0.0"
   },
   "dependencies": {
+    "@types/classnames": "0.0.32",
     "@types/react": "^0.14.43",
     "@types/react-dom": "^0.14.18",
+    "@types/react-router": "^3.0.5",
+    "classnames": "^2.2.5",
     "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+    "react-router": "^3.0.2"
   },
   "scripts": {
     "start": "node scripts/start.js",
