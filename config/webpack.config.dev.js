@@ -82,7 +82,7 @@ module.exports = {
       'react-native': 'react-native-web'
     }
   },
-  
+
   module: {
     // First, run the linter.
     // It's important to do this before Babel processes the JS.
@@ -166,8 +166,7 @@ module.exports = {
       }
     ]
   },
-  
-  // We use PostCSS for autoprefixing only.
+
   postcss: () => {
     return [
       // Allows you to nest one style rule inside another
@@ -186,6 +185,8 @@ module.exports = {
           'not ie < 9', // React doesn't support IE8 anyway
         ]
       }),
+      require('postcss-color-function')(),
+      // require('postcss-custom-properties')(),
     ];
   },
   plugins: [

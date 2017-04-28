@@ -1,23 +1,31 @@
 @import '../../common/variables.css';
 
+.navText {
+  letter-spacing: 0;
+  font-weight: 200;
+}
 .nav {
-  width: calc( 100vw / 3 );
-  padding: 2.25rem;
-  a {
-    letter-spacing: 0;
-    display: block;
-  }
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0 3.5rem;
 }
 .toHome {
-  color: var(--chrm-blue);
-  font-size: 2.25rem;
-  font-weight: 200;
-  margin-bottom: 2rem;
-  margin-left: -4px;
+  composes: navText;
+  background: var(--chrm-blue);
+  display: flex;
+  width: 5.25rem;
+  height: 5.25rem;
+  align-items: center;
+  margin: 0 2rem;
+  color: white;
+  font-size: 1.75rem;
+  text-align: center;
+  white-space: pre-line;
 }
 .toAbout, .toWorks {
-  font-size: 1.125rem;
+  composes: navText;
   color: var(--gray-dark);
-  font-weight: 200;
-  margin-bottom: 1rem;
+  font-size: 1.125rem;
 }

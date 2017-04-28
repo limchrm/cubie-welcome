@@ -35,6 +35,8 @@
     "json-loader": "0.5.4",
     "object-assign": "4.1.0",
     "path-exists": "2.1.0",
+    "postcss-color-function": "^3.0.0",
+    "postcss-custom-properties": "^5.0.2",
     "postcss-loader": "1.0.0",
     "postcss-nested": "^1.0.0",
     "postcss-nesting": "^2.3.1",

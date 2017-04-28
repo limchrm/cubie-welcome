@@ -1,9 +1,14 @@
 @import './common/reset.css';
+@import './common/variables.css';
 
-.App {
-  display: flex;
-}
-.body {
-  width: calc( 100vw / 3 * 2 );
-  padding: 2.25rem;
+.introPhrase {
+  text-align: center;
+  margin-bottom: 3.5rem;
+  color: var(--gray-dark);
+  font-size: 1rem;
+  font-weight: 200;
+  b {
+    color: var(--chrm-blue);
+    font-weight: 400;
+  }
 }
