@@ -8,17 +8,20 @@ const ListItem: StatelessComponent<worksProps> = props => (
     <div
       className={styles.thumb}
       style={{ backgroundImage: `url(${props.thumbnailUrl})` }}
-    >
-      <div className={styles.text}>
-        <h3>{props.title}</h3>
-        <h4>{props.description}</h4>
-        <ul className={styles.tags}>
-          {props.tags.map(tag => (
-            <li key={tag}>{tag}</li>
-          ))}
-        </ul>
-        <a className={styles.link} href={props.url}>VIEW DETAIL</a>
-      </div>
+    />
+    <div className={styles.text}>
+      <img
+        className={styles.bi}
+        src={require('../../common/images/bi-finda.svg')}
+        alt={props.title}
+      />
+      <h3>{props.description}</h3>
+      <ul className={styles.tags}>
+        {props.tags.map(tag => (
+          <li key={tag}>{tag}</li>
+        ))}
+      </ul>
+      <a className={styles.link} href={props.url}>VIEW DETAIL</a>
     </div>
   </article>
 );
