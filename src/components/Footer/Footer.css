@@ -1,0 +1,9 @@
+@import '../../common/variables.css';
+
+.copyright {
+  text-align: center;
+  font-size: 0.625rem;
+  letter-spacing: 0.025em;
+  color: var(--gray-dark);
+  padding: 3rem 0;
+}
