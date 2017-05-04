@@ -16,7 +16,7 @@ class Nav extends Component<any, any> {
           RM
         </Link>
 
-        <Link className={styles.toWorks} to="/">
+        <Link className={styles.toWorks} to="/works">
           WORKS
         </Link>
 
