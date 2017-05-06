@@ -1,0 +1,98 @@
+@import '../../common/variables.css';
+
+.header {
+  background: black;
+  position: relative;
+}
+.headerBg {
+  composes: bgImgCenter from '../../common/composes.css';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.45;
+}
+.container {
+  height: 20rem;
+  padding-bottom: 2.5rem;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  max-width: var(--max-width);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0 auto;
+  color: white;
+}
+
+.type {
+  letter-spacing: 0;
+  font-weight: 200;
+  font-size: 0.875rem;
+  opacity: 0.3;
+}
+.title {
+  h1, h2 {
+    font-weight: 100;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+  }
+  h2 {
+    font-size: 1rem;
+    opacity: 0.75;
+  }
+}
+
+.tags {
+  composes: tag from '../../common/composes.css';
+  margin-top: 1.5rem;
+  li {
+    font-size: 0.5rem;
+  }
+}
+.info {
+  p {
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+    opacity: 0.75;
+    font-weight: 300;
+    &:before {
+      content: '';
+      width: 0.75rem;
+      height: 0.75rem;
+      margin-right: 0.25rem;
+      border-radius: 50%;
+      background: white;
+    }
+  }
+}
+.date {
+  font-weight: 100;
+  letter-spacing: 0;
+}
+.belongTo {
+  letter-spacing: 0;
+}
+.linkToWork {
+  composes: ellipsis from '../../common/composes.css';
+  display: inline-block;
+  letter-spacing: 0;
+  max-width: 20rem;
+  font-size: 0.625rem;
+  &:hover, &:active {
+    box-shadow: inset 0 -1px;
+  }
+}
+.nav {
+  display: none;
+}

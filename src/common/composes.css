@@ -1,0 +1,27 @@
+@import './variables.css';
+
+.container {
+
+}
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tag {
+  display: flex;
+  align-items: center;
+  li {
+    font-weight: 200;
+    border: 1px solid;
+    padding: 0.5em 0.625rem;
+    margin: 0 0.375em;
+    letter-spacing: 0;
+    transition: all 0.1s ease-out;
+  }
+}
+.bgImgCenter {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

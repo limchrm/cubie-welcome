@@ -1,13 +1,12 @@
 import React, { Component, StatelessComponent } from 'react';
 import works, { worksProps } from '../../common/works';
-import { DetailHeader } from '../../components/Detail';
+import Detail from '../../components/Detail';
 
 class CoupleteDetail extends Component<any, any> {
   render() {
     return (
-      <div>
-        <DetailHeader workNumber={1}/>
-      </div>
+      <Detail workNumber={1}>
+      </Detail>
     );
   }
 }

@@ -1,33 +1,17 @@
 import React, { Component, StatelessComponent } from 'react';
 import works, { worksProps } from '../../common/works';
+import { DetailHeader, DetailNav } from '../Detail';
 
-const DetailHeader: StatelessComponent<worksProps> = props => {
-  const {
-    title,
-    description,
-    startDate,
-    endDate,
-    belongTo,
-    type,
-    tags,
-    workUrl,
-  } = props;
-
+export interface DetailProps {
+  workNumber?: number;
+}
+const Detail: StatelessComponent<DetailProps> = ({ workNumber }) => {
   return (
-    <header>
-      <h1>{title}</h1>
-      <h2>{description}</h2>
-      <h3>{startDate} ~ {endDate}</h3>
-      <h4>{type}</h4>
-      <p>{belongTo}</p>
-      <ul>
-        {tags.map(tag => (
-          <li key={tag}>{tag}</li>
-        ))}
-      </ul>
-      <a href={workUrl} target="_blank">{workUrl}</a>
-    </header>
+    <div>
+      <DetailNav workNumber={workNumber}/>
+      <DetailHeader workNumber={workNumber}/>
+    </div>
   );
 }
 
-export default DetailHeader;
+export default Detail;

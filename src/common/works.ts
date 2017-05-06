@@ -28,7 +28,7 @@ const works: worksProps[] = [{
   thumbnailUrl: require('./images/thumb-couplete.png'),
   BIUrl: require('./images/bi-finda.svg'),
 }, {
-  title: '핀다 Finda',
+  title: '핀다',
   description: '금융상품 검색의 시작',
   startDate: '2016/01',
   endDate: '2017/03',

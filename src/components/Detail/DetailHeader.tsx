@@ -1,33 +1,56 @@
 import React, { Component, StatelessComponent } from 'react';
+import classNames from 'classnames';
 import works, { worksProps } from '../../common/works';
+import { DetailProps } from './Detail';
+const styles = require('./Detail.css');
 
-interface DetailHeaderProps {
-  workNumber: number;
-}
-const DetailHeader: StatelessComponent<DetailHeaderProps> = props => {
+const DetailHeader: StatelessComponent<DetailProps> = ({ workNumber }) => {
+  const work = works[workNumber - 1];
+
   return (
-    <header>
-      {works.slice(props.workNumber - 1, props.workNumber).map(work => (
-        <div key={work.title}>
+    <header className={styles.header}>
+      <div
+        className={styles.headerBg}
+        style={{ backgroundImage: `url(${work.thumbnailUrl})` }}
+      />
+      <div className={styles.container}>
+        <div className={styles.title}>
+          <h4 className={styles.type}>{work.type}</h4>
           <h1>{work.title}</h1>
           <h2>{work.description}</h2>
-          <h3>
-            {work.startDate === work.endDate
-              ? work.startDate
-              : `${work.startDate} ~ ${work.endDate}`
-            }
-          </h3>
-          <h4>{work.type}</h4>
-          <p>{work.belongTo}</p>
-          <p>{work.workedBy}</p>
-          <ul>
+          <ul className={styles.tags}>
             {work.tags.map(tag => (
               <li key={tag}>{tag}</li>
             ))}
           </ul>
-          <a href={work.workUrl} target="_blank">{work.workUrl}</a>
         </div>
-      ))}
+
+        <div className={styles.info}>
+          <p>
+            {work.startDate === work.endDate
+              ? work.startDate
+              : `${work.startDate} ~ ${work.endDate}`
+            }
+          </p>
+
+          <p className={classNames({
+            [styles.belongTo]: true,
+            [styles.company]: work.workedBy === 'company',
+            [styles.personal]: work.workedBy === 'personal',
+          })}>
+            {work.belongTo}
+          </p>
+
+          <p>
+            <a
+              className={styles.linkToWork}
+              href={work.workUrl}
+              target="_blank"
+            >{work.workUrl}</a>
+          </p>
+
+        </div>
+      </div>
     </header>
   );
 }
