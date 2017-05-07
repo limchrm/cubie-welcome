@@ -6,3 +6,12 @@ export { DetailHeader };
 
 import DetailNav from './DetailNav';
 export { DetailNav };
+
+import DetailSection from './DetailSection';
+export { DetailSection };
+
+import DetailLink from './DetailLink';
+export { DetailLink };
+
+import DetailLargeImage from './DetailLargeImage';
+export { DetailLargeImage };

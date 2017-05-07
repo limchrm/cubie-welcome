@@ -1,17 +1,30 @@
-import React, { Component, StatelessComponent } from 'react';
+import React, { Component } from 'react';
 import works, { worksProps } from '../../common/works';
-import { DetailHeader, DetailNav } from '../Detail';
+import {
+  DetailHeader,
+  DetailNav,
+  DetailSection,
+} from '../Detail';
+const styles = require('./Detail.css');
 
 export interface DetailProps {
   workNumber?: number;
 }
-const Detail: StatelessComponent<DetailProps> = ({ workNumber }) => {
-  return (
-    <div>
-      <DetailNav workNumber={workNumber}/>
-      <DetailHeader workNumber={workNumber}/>
-    </div>
-  );
+class Detail extends Component<DetailProps, any> {
+  render() {
+    return (
+      <div>
+        <DetailNav workNumber={this.props.workNumber}/>
+        <DetailHeader workNumber={this.props.workNumber}/>
+
+        <div className={styles.body}>
+          {this.props.children}
+        </div>
+
+      </div>
+    );
+  }
 }
+
 
 export default Detail;
