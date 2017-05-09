@@ -12,6 +12,7 @@ const ListItem: StatelessComponent<worksProps> = props => {
     detailUrl,
     thumbnailUrl,
     BIUrl,
+    BIWidth,
   } = props;
 
   return (
@@ -26,6 +27,7 @@ const ListItem: StatelessComponent<worksProps> = props => {
             className={styles.bi}
             src={BIUrl}
             alt={title}
+            style={{ width: BIWidth }}
           />
           <h3>{description}</h3>
           <ul className={styles.tags}>
@@ -55,6 +57,7 @@ class List extends Component<any, any> {
             detailUrl={work.detailUrl}
             thumbnailUrl={work.thumbnailUrl}
             BIUrl={work.BIUrl}
+            BIWidth={work.BIWidth}
           />
         ))}
       </div>

@@ -11,6 +11,7 @@ export interface worksProps {
   workUrl?: string;
   thumbnailUrl?: string;
   BIUrl?: string;
+  BIWidth?: string;
   className?: string;
 }
 
@@ -26,7 +27,8 @@ const works: worksProps[] = [{
   detailUrl: '/works/couplete',
   workUrl: 'http://couplete.me',
   thumbnailUrl: require('./images/thumb-couplete.png'),
-  BIUrl: require('./images/bi-finda.svg'),
+  BIUrl: require('./images/bi-couplete.svg'),
+  BIWidth: '12.5rem',
 }, {
   title: '핀다',
   description: '금융상품 검색의 시작',
@@ -40,6 +42,7 @@ const works: worksProps[] = [{
   workUrl: 'https://www.finda.co.kr',
   thumbnailUrl: require('./images/thumb-finda.jpg'),
   BIUrl: require('./images/bi-finda.svg'),
+  BIWidth: '9rem',
 }, {
   title: '러브데이',
   description: '오늘 우리, 사랑한지 며칠쨰?',
@@ -53,6 +56,7 @@ const works: worksProps[] = [{
   workUrl: 'https://play.google.com/store/apps/details?id=com.wonderabbit.lovedays',
   thumbnailUrl: require('./images/thumb-lovedays.png'),
   BIUrl: require('./images/bi-finda.svg'),
+  BIWidth: '10rem',
 }, {
   title: '따옴',
   description: '삶에 힘이 되는 작은 말들',
@@ -65,7 +69,8 @@ const works: worksProps[] = [{
   detailUrl: '/works/ddaom',
   workUrl: 'https://chrome.google.com/webstore/detail/%EB%94%B0%EC%98%B4/jghdlfphhceakekbhfdoohoaoomhgoac?hl=ko',
   thumbnailUrl: require('./images/thumb-ddaom.png'),
-  BIUrl: require('./images/bi-finda.svg'),
+  BIUrl: require('./images/bi-ddaom.svg'),
+  BIWidth: '7.25rem',
 }]
 
 export default works;
