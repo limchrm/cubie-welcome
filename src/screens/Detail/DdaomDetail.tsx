@@ -1,15 +1,11 @@
-import React, { Component, StatelessComponent } from 'react';
-import works, { worksProps } from '../../common/works';
-import { DetailHeader } from '../../components/Detail';
+import React, { StatelessComponent } from 'react';
+import { DetailSlider } from '../../components/Detail';
 
-class DdaomDetail extends Component<any, any> {
-  render() {
-    return (
-      <div>
-        <DetailHeader workNumber={4}/>
-      </div>
-    );
-  }
-}
+const DdaomDetail: StatelessComponent<void> = () => (
+  <DetailSlider
+    title='ddaom'
+    maxStep={3}
+  />
+);
 
 export default DdaomDetail;

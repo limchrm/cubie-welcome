@@ -1,15 +1,11 @@
-import React, { Component, StatelessComponent } from 'react';
-import works, { worksProps } from '../../common/works';
-import { DetailHeader } from '../../components/Detail';
+import React, { StatelessComponent } from 'react';
+import { DetailSlider } from '../../components/Detail';
 
-class LovedaysDetail extends Component<any, any> {
-  render() {
-    return (
-      <div>
-        <DetailHeader workNumber={3}/>
-      </div>
-    );
-  }
-}
+const LovedaysDetail: StatelessComponent<void> = () => (
+  <DetailSlider
+    title='lovedays'
+    maxStep={4}
+  />
+);
 
 export default LovedaysDetail;

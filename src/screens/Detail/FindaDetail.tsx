@@ -1,15 +1,11 @@
-import React, { Component, StatelessComponent } from 'react';
-import works, { worksProps } from '../../common/works';
-import { DetailHeader } from '../../components/Detail';
+import React, { StatelessComponent } from 'react';
+import { DetailSlider } from '../../components/Detail';
 
-class FindaDetail extends Component<any, any> {
-  render() {
-    return (
-      <div>
-        <DetailHeader workNumber={2}/>
-      </div>
-    );
-  }
-}
+const FindaDetail: StatelessComponent<void> = () => (
+  <DetailSlider
+    title='finda'
+    maxStep={6}
+  />
+);
 
 export default FindaDetail;

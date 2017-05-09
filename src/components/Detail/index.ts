@@ -15,3 +15,6 @@ export { DetailLink };
 
 import DetailLargeImage from './DetailLargeImage';
 export { DetailLargeImage };
+
+import DetailSlider from './DetailSlider';
+export { DetailSlider };
